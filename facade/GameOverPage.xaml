@@ -2,13 +2,67 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="facade.GameOverPage"
-             Title="GameOverPage">
-    <VerticalStackLayout>
-        <Label
-            x:Name="ResultLabel"
+             Title="#facade"
+             
+             >
+    <Grid Padding="0" RowSpacing="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+        <Border Margin="12">
+            <Border.Shadow>
+                <Shadow Brush="Black"
+                    Offset="10,10"
+                    Radius="40"
+                    Opacity="0.3" />
+            </Border.Shadow>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="30, 30, 30, 30" />
+            </Border.StrokeShape>
+
+            <Grid BackgroundColor="#beaded" Padding="12" Grid.Row="0" HorizontalOptions="Fill" VerticalOptions="Fill">
+
+                <Label Text="#BEADED"
+                       FontSize="60"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+
+            </Grid>
+        </Border>
+
+        <StackLayout Grid.Row="1" Padding="20">
+            <Label 
+                x:Name="ResultLabel"
+            Text="{Binding Result}"
+            FontSize="32"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Margin="12"/>
+            <Label Text="Guessed correctly in" HorizontalOptions="Center" VerticalOptions="Center" FontSize="32"/>
+            <Label Text="4 guesses" HorizontalOptions="Center" VerticalOptions="Center" FontSize="32"/>
+            <Button Text="Play Again" Margin="42" FontSize="28" BackgroundColor="#facade" TextColor="White"/>
+        </StackLayout>
+
+        
+    </Grid>
+
+
+
+
+
+
+</ContentPage>
+
+<!--<Label 
+                x:Name="ResultLabel"
             Text="{Binding Result}"
             FontSize="Title"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>-->
+
+    
+

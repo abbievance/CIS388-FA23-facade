@@ -6,189 +6,171 @@
              >
 
     <ScrollView>
-        <Grid Padding="0" RowSpacing="16">
+        <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="1000" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
+          
 
             </Grid.RowDefinitions>
 
-
-            <!--<RoundRectangle Grid.Row="0" Fill="#facade" CornerRadius="48" MaximumHeightRequest="150"/>-->
-            <StackLayout HorizontalOptions="Fill" BackgroundColor="#facade" Padding="8" Grid.Row="0" Orientation="Horizontal"  >
-
-                <Label Text="#" FontSize="60" VerticalOptions="Center" />
-                <Label Text="FACADE"
-                       FontSize="60"
-                       VerticalOptions="Center"
-                       />
+            <StackLayout Grid.Row="0" BackgroundColor="#beaded" Padding="8" ZIndex="1">
 
             </StackLayout>
 
-            <Grid Padding="12" Grid.Row="1" RowSpacing="12" ColumnSpacing="12">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Button Grid.Row="0"
+            <Border HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.RowSpan="2" ZIndex="2">
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                    Offset="0,0"
+                    Radius="40"
+                    Opacity="0.8" />
+                </Border.Shadow>
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="30, 30, 0, 0" />
+                    </Border.StrokeShape>
+                <VerticalStackLayout>
+                    <Grid Grid.Row="0" Padding="12"  RowSpacing="12" ColumnSpacing="12">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="#beaded"
-                    BackgroundColor="#beaded"
+                    Text="#beadef"
+                    BackgroundColor="#beadef"
                     FontSize="16"
                     IsEnabled="false "/>
-                <Button Grid.Row="0"
+                    <Button Grid.Row="0"
                     Grid.Column="1"
                     Text="#fadedd"
                     BackgroundColor="#fadedd"
                     FontSize="16"
                     IsEnabled="false "/>
-                <Button Grid.Row="0"
+                    <Button Grid.Row="0"
                     Grid.Column="2"
-                    Text="#beefed"
-                    BackgroundColor="#beefed"
+                    Text="#aefacd"
+                    BackgroundColor="#aefacd"
                     FontSize="16"
                     IsEnabled="false "/>
-
-                <Button Grid.Row="1"
+                    <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text=""
-                    BackgroundColor="Transparent"
-                    BorderColor="#111"
-                    BorderWidth="1"
+                    Text="#decade"
+                    BackgroundColor="#decade"
                     FontSize="16"
                     IsEnabled="false "/>
-                <Button Grid.Row="1"
+                    <Button Grid.Row="1"
                     Grid.Column="1"
                     Text=""
-                    BackgroundColor="Transparent"
                     BorderColor="#111"
                     BorderWidth="1"
-                    FontSize="16"
-                    IsEnabled="false "/>
-                <Button Grid.Row="1"
-                    Grid.Column="2"
-                    Text=""
                     BackgroundColor="Transparent"
-                    BorderColor="#111"
-                    BorderWidth="1"
                     FontSize="16"
                     IsEnabled="false "/>
-
-            </Grid>
-
-            <Grid Padding="12" Grid.Row="2" RowSpacing="12" ColumnSpacing="12">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="auto" />
-
-                </Grid.ColumnDefinitions>
-
-                <Button Grid.Row="0"
-                    Grid.Column="0"
-                    Text="A"
-                    WidthRequest="80"
-                    HeightRequest="80"
-                    BackgroundColor="#666"
-                    TextColor="White"
-                    FontSize="48"
-                />
-                <Button Grid.Row="0"
-                    Grid.Column="1"
-                    Text="B"
-                    WidthRequest="80"
-                    HeightRequest="80"
-                    BackgroundColor="#666"
-                    TextColor="White"
-
-                    FontSize="48"
-                />
-                <Button Grid.Row="0"
-                    Grid.Column="2"
-                    Text="C"
-                   WidthRequest="80"
-                    HeightRequest="80"
-                    BackgroundColor="#666"
-                    TextColor="White"
-
-                    FontSize="48"
-                />
-                <Button Grid.Row="1"
-                    Grid.Column="0"
-                    Text="D"
-                    WidthRequest="80"
-                    HeightRequest="80"
-                    BackgroundColor="#666"
-                    TextColor="White"
-
-                    FontSize="48"
-                />
-                <Button Grid.Row="1"
-                    Grid.Column="1"
-                    Text="E"
-                    WidthRequest="80"
-                    HeightRequest="80"
-                    BackgroundColor="#666"
-                    TextColor="White"
-
-                    FontSize="48"
-                />
-                <Button Grid.Row="1"
-                    Grid.Column="2"
-                    Text="F"
-                    WidthRequest="80"
-                    HeightRequest="80"
-                    BackgroundColor="#666"
-                    TextColor="White"
-
-                    FontSize="48"
-                />
-                <Button Grid.Row="0"
+                    <Button Grid.Row="1"
                     Grid.Column="3"
+                    Text=""
+                    BorderColor="#111"
+                    BorderWidth="1"
+                    BackgroundColor="Transparent"
+                    FontSize="16"
+                    IsEnabled="false "/>
+
+
+                </Grid>
+                    <Grid Grid.Row="1" Padding="20" ColumnSpacing="20" RowSpacing="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0"
+                        HeightRequest="80"
+                        Grid.Column="0"
+                        Text="A"
+                        BackgroundColor="#facade"
+                        FontSize="16"
+                        IsEnabled="false "/>
+                        <Button Grid.Row="0"
+                        HeightRequest="80"
+                        Grid.Column="1"
+                        Text="B"
+                        BackgroundColor="#facade"
+                        FontSize="16"
+                        IsEnabled="false "/>
+                        <Button Grid.Row="1"
+                        HeightRequest="80"
+                        Grid.Column="0"
+                        Text="C"
+                        BackgroundColor="#facade"
+                        FontSize="16"
+                        IsEnabled="false "/>
+                        <Button Grid.Row="1"
+                       Grid.Column="1"
+                       HeightRequest="80"
+                       Text="D"
+                       BackgroundColor="#facade"
+                       FontSize="16"
+                       IsEnabled="false "
+                                />
+                        <Button Grid.Row="2"
+                       HeightRequest="80"
+                       Grid.Column="0"
+                       Text="E"
+                       BackgroundColor="#facade"
+                       FontSize="16"
+                       IsEnabled="false "/>
+                        <Button Grid.Row="2"
+                       HeightRequest="80"
+                       Grid.Column="1"
+                       Text="F"
+                       BackgroundColor="#facade"
+                       FontSize="16"
+                       IsEnabled="false "/>
+                        <Button Grid.Row="2"
+                                
+                    Grid.Column="2"
                     Text="↑"
                     WidthRequest="60"
                     HeightRequest="60"
                         CornerRadius="30"
-                    BackgroundColor="#666"
+                    BackgroundColor="#facade"
                     TextColor="White"
                     Clicked="Button_Clicked"
                     FontSize="32"
+                    Padding="0, 0, 0, 8"
                 >
-                    <Button.Shadow>
-                        <Shadow Brush="Gray"
+                            <Button.Shadow>
+                                <Shadow Brush="Gray"
                                 Offset="0,0"
                                 Radius="5"
                                 Opacity="0.5" />
-                    </Button.Shadow>
-                </Button>
-                <Button Grid.Row="1"
+                            </Button.Shadow>
+                        </Button>
+                        <Button Grid.Row="0"
                     Grid.Column="3"
                     Text="⌫"
-                    WidthRequest="60"
-                    HeightRequest="60"
+                    WidthRequest="90"
+                    HeightRequest="90"
                     BackgroundColor="Transparent"
                     TextColor="#333"
                     BorderWidth="0"
                     FontSize="36"
                 />
-
-
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
             </Grid>
-        </Grid>
+
 
     </ScrollView>
 
