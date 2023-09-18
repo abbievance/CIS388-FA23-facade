@@ -5,64 +5,124 @@
              Title="#facade"
              
              >
-    <Grid Padding="0" RowSpacing="16">
+    <Grid BackgroundColor="#facade" RowSpacing="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="400" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="200" />
 
         </Grid.RowDefinitions>
 
-        <Border Margin="12">
+        <Border Margin="20" Grid.Row="0">
             <Border.Shadow>
                 <Shadow Brush="Black"
-                    Offset="10,10"
-                    Radius="40"
+                    Offset="20,50"
+                    Radius="30"
                     Opacity="0.3" />
             </Border.Shadow>
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="30, 30, 30, 30" />
             </Border.StrokeShape>
 
-            <Grid BackgroundColor="#beaded" Padding="12" Grid.Row="0" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid BackgroundColor="#beaded" HorizontalOptions="Fill" VerticalOptions="Fill">
 
                 <Label Text="#BEADED"
                        FontSize="60"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
+                       TextColor="White"
+                       FontFamily="Mono"
                        />
 
             </Grid>
         </Border>
 
-        <StackLayout Grid.Row="1" Padding="20">
+        <HorizontalStackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
             <Label 
+                FontFamily="Mono"
                 x:Name="ResultLabel"
             Text="{Binding Result}"
-            FontSize="32"
+            FontSize="38"
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Margin="12"/>
-            <Label Text="Guessed correctly in" HorizontalOptions="Center" VerticalOptions="Center" FontSize="32"/>
-            <Label Text="4 guesses" HorizontalOptions="Center" VerticalOptions="Center" FontSize="32"/>
-            <Button Text="Play Again" Margin="42" FontSize="28" BackgroundColor="#facade" TextColor="White"/>
-        </StackLayout>
+                TextColor="White"/>
+        </HorizontalStackLayout>
 
-        
+        <Grid Grid.Row="2" Padding="10" MaximumHeightRequest="250" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Grid.Row="0" Background="White" StrokeThickness="3" Stroke="#ffffff">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="30, 30, 30, 30"/>
+                </Border.StrokeShape>
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                    Offset="20,40"
+                    Radius="20"
+                    Opacity="0.3" />
+                </Border.Shadow>
+                <VerticalStackLayout  HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label
+                        FontFamily="Mono"
+                        Text="05" FontSize="50" HorizontalOptions="Center" TextColor="#facade"></Label>
+                    <Label
+                        FontFamily="Mono"
+                        Text="Guesses" FontSize="28" TextColor="#facade"></Label>
+                    <Border WidthRequest="50" Margin="12" StrokeThickness="1" Stroke="LightGray" BackgroundColor="LightGray">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="100, 100, 100, 100"/>
+                        </Border.StrokeShape>
+                        <Label
+                            FontFamily="Mono"
+                        Text="?" FontSize="28" TextColor="#ffffff" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Grid.Column="1" Grid.Row="0" Background="White" StrokeThickness="3" Stroke="#ffffff">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="30, 30, 30, 30"/>
+                </Border.StrokeShape>
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                    Offset="20,40"
+                    Radius="20"
+                    Opacity="0.3" />
+                </Border.Shadow>
+                <VerticalStackLayout  HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="0">
+                    <Label
+                        FontFamily="Mono"
+                        Text="↺" FontSize="50" HorizontalOptions="Center" TextColor="#facade"></Label>
+                    <Label
+                        FontFamily="Mono"
+                        Text="Play Again" FontSize="28" TextColor="#facade"></Label>
+                    <Border WidthRequest="50" Margin="12" StrokeThickness="1" Stroke="LightGray" BackgroundColor="LightGray">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="100, 100, 100, 100"/>
+                        </Border.StrokeShape>
+                        <Label
+                            FontFamily="Mono"
+                        Text="⮕" FontSize="28" TextColor="#ffffff" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Border>
+
+
+
+        </Grid>
+
     </Grid>
-
-
-
-
-
 
 </ContentPage>
 
-<!--<Label 
-                x:Name="ResultLabel"
-            Text="{Binding Result}"
-            FontSize="Title"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/>-->
 
     
 
