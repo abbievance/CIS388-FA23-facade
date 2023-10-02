@@ -50,7 +50,7 @@ namespace facade
         }
 
         [RelayCommand]
-        async Task Guess(SelectionChangedEventArgs e)
+        async Task Guess()
         {
             // if correct, did win = true
             // if this is the 6th guess and its wrong, didwin=false
