@@ -1,7 +1,10 @@
-﻿namespace facade;
+﻿using System.Collections.ObjectModel;
+
+namespace facade;
 
 [QueryProperty("DidWin", "DidWin")]
 public partial class GameOverPage : ContentPage
+
 {
     private bool didWin;
     public bool DidWin
@@ -21,10 +24,11 @@ public partial class GameOverPage : ContentPage
         }
     }
 
+
     public GameOverPage()
 	{
 		InitializeComponent();
-	}
+    }
     async void Button_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync("..");

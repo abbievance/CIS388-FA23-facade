@@ -3,12 +3,14 @@ using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Web;
 
 namespace facade
 {
     public partial class MainPageViewModel: ObservableObject
     {
         public bool DidWin { get; set; } = true;
+
 
         [ObservableProperty]
         /*private Color secretColor;*/
@@ -23,16 +25,9 @@ namespace facade
         public MainPageViewModel()
         {
             /*secretColor = Color.FromArgb("#beefed");*/
-            secretColor = "FACADE";
+            secretColor = "BEADED";
             currentGuess = "";
             Guesses = new ObservableCollection<ColorGuess>();
-            var color = new ColorGuess("beaded");
-
-            Guesses.Add(color);
-            Guesses.Add(color);
-            Guesses.Add(color);
-            Guesses.Add(color);
-            Guesses.Add(color);
         }
 
         [RelayCommand]
@@ -55,7 +50,7 @@ namespace facade
         }
 
         [RelayCommand]
-        async Task Guess()
+        async Task Guess(SelectionChangedEventArgs e)
         {
             // if correct, did win = true
             // if this is the 6th guess and its wrong, didwin=false
@@ -73,14 +68,10 @@ namespace facade
                 DidWin = false;
                 await Shell.Current.GoToAsync($"{nameof(GameOverPage)}?DidWin={DidWin}");
                 Guesses.Clear();
-
             }
             CurrentGuess = "";
 
         }
-
-
-
 
     }
 }

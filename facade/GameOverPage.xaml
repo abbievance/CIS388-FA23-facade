@@ -7,7 +7,7 @@
              >
 
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior IsEnabled="True" IsVisible="True"/>
+        <BackButtonBehavior IsEnabled="False" IsVisible="False"/>
     </Shell.BackButtonBehavior>
     <Grid RowSpacing="10">
         <Grid.RowDefinitions>
@@ -65,44 +65,50 @@
                    ></Label>
             <ScrollView Orientation="Horizontal" Grid.Row="3" HorizontalScrollBarVisibility="Always" Padding="5">
                 <HorizontalStackLayout>
-                    <Button
+                <Button
                         TextColor="Black"
-                        BackgroundColor="#beffed"
+                         x:Name="guess1"
+                        BackgroundColor="#facedb"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
-                        IsEnabled="False"></Button>
-                    <Button
+                         IsEnabled="False"></Button>
+                <Button
                         TextColor="Black"
-                        BackgroundColor="#beffed"
+                         x:Name="guess2"
+                        BackgroundColor="#beeded"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
                          IsEnabled="False"></Button>
                     <Button
                         TextColor="Black"
-                        BackgroundColor="#beffed"
+                         x:Name="guess3"
+                        BackgroundColor="#edafed"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
                          IsEnabled="False"></Button>
                     <Button
                         TextColor="Black"
-                        BackgroundColor="#beffed"
+                         x:Name="guess4"
+                        BackgroundColor="#facade"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
                          IsEnabled="False"></Button>
                     <Button
                         TextColor="Black"
-                        BackgroundColor="#beffed"
+                         x:Name="guess5"
+                        BackgroundColor="#deface"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
                          IsEnabled="False"></Button>
                     <Button
                         TextColor="Black"
-                        BackgroundColor="#beffed"
+                         x:Name="guess6"
+                        BackgroundColor="#feaded"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"

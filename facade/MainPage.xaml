@@ -16,7 +16,7 @@
 
             </Grid.RowDefinitions>
 
-            <StackLayout Grid.Row="0" BackgroundColor="#facade" Padding="8" ZIndex="1">
+            <StackLayout Grid.Row="0" BackgroundColor="#beaded" Padding="8" ZIndex="1">
                 <Label 
                     FontFamily="Mono"
                     Text="{Binding CurrentGuess}"
