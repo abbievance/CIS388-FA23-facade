@@ -5,15 +5,34 @@
              Title="#facade"
              
              >
-    <Grid BackgroundColor="#facade" RowSpacing="20">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="True" IsVisible="True"/>
+    </Shell.BackButtonBehavior>
+    <Grid RowSpacing="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
             <RowDefinition Height="400" />
             <RowDefinition Height="auto" />
-            <RowDefinition Height="200" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
 
         </Grid.RowDefinitions>
 
-        <Border Margin="20" Grid.Row="0">
+
+        <HorizontalStackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+            <Label 
+                FontFamily="Mono"
+                x:Name="ResultLabel"
+            Text="{Binding Result}"
+            FontSize="38"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+                TextColor="#facade"
+                Padding="10"/>
+        </HorizontalStackLayout>
+
+        <Border Margin="20" Grid.Row="1">
             <Border.Shadow>
                 <Shadow Brush="Black"
                     Offset="20,50"
@@ -37,91 +56,84 @@
             </Grid>
         </Border>
 
-        <HorizontalStackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
-            <Label 
-                FontFamily="Mono"
-                x:Name="ResultLabel"
-            Text="{Binding Result}"
-            FontSize="38"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-                TextColor="White"/>
-        </HorizontalStackLayout>
 
-        <Grid Grid.Row="2" Padding="10" MaximumHeightRequest="250" ColumnSpacing="10">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+            <Label Grid.Row="2"
+                Text="PREVIOUS GUESSES"
+                   Padding="5"
+                   FontSize="18"
+                   TextColor="#facade"
+                   ></Label>
+            <ScrollView Orientation="Horizontal" Grid.Row="3" HorizontalScrollBarVisibility="Always" Padding="5">
+                <HorizontalStackLayout>
+                    <Button
+                        TextColor="Black"
+                        BackgroundColor="#beffed"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Margin="10"
+                        IsEnabled="False"></Button>
+                    <Button
+                        TextColor="Black"
+                        BackgroundColor="#beffed"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Margin="10"
+                         IsEnabled="False"></Button>
+                    <Button
+                        TextColor="Black"
+                        BackgroundColor="#beffed"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Margin="10"
+                         IsEnabled="False"></Button>
+                    <Button
+                        TextColor="Black"
+                        BackgroundColor="#beffed"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Margin="10"
+                         IsEnabled="False"></Button>
+                    <Button
+                        TextColor="Black"
+                        BackgroundColor="#beffed"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Margin="10"
+                         IsEnabled="False"></Button>
+                    <Button
+                        TextColor="Black"
+                        BackgroundColor="#beffed"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Margin="10"
+                         IsEnabled="False"></Button>
+                </HorizontalStackLayout>
+            </ScrollView>
 
-            <Border Grid.Column="0" Grid.Row="0" Background="White" StrokeThickness="3" Stroke="#ffffff">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="30, 30, 30, 30"/>
-                </Border.StrokeShape>
-                <Border.Shadow>
-                    <Shadow Brush="Black"
-                    Offset="20,40"
-                    Radius="20"
-                    Opacity="0.3" />
-                </Border.Shadow>
-                <VerticalStackLayout  HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label
-                        FontFamily="Mono"
-                        Text="05" FontSize="50" HorizontalOptions="Center" TextColor="#facade"></Label>
-                    <Label
-                        FontFamily="Mono"
-                        Text="Guesses" FontSize="28" TextColor="#facade"></Label>
-                    <Border WidthRequest="50" Margin="12" StrokeThickness="1" Stroke="LightGray" BackgroundColor="LightGray">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="100, 100, 100, 100"/>
-                        </Border.StrokeShape>
-                        <Label
-                            FontFamily="Mono"
-                        Text="?" FontSize="28" TextColor="#ffffff" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                    </Border>
-
-                </VerticalStackLayout>
-            </Border>
-
-            <Border Grid.Column="1" Grid.Row="0" Background="White" StrokeThickness="3" Stroke="#ffffff">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="30, 30, 30, 30"/>
-                </Border.StrokeShape>
-                <Border.Shadow>
-                    <Shadow Brush="Black"
-                    Offset="20,40"
-                    Radius="20"
-                    Opacity="0.3" />
-                </Border.Shadow>
-                <VerticalStackLayout  HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="0">
-                    <Label
-                        FontFamily="Mono"
-                        Text="↺" FontSize="50" HorizontalOptions="Center" TextColor="#facade"></Label>
-                    <Label
-                        FontFamily="Mono"
-                        Text="Play Again" FontSize="28" TextColor="#facade"></Label>
-                    <Border WidthRequest="50" Margin="12" StrokeThickness="1" Stroke="LightGray" BackgroundColor="LightGray">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="100, 100, 100, 100"/>
-                        </Border.StrokeShape>
-                        <Label
-                            FontFamily="Mono"
-                        Text="⮕" FontSize="28" TextColor="#ffffff" VerticalOptions="Center" HorizontalOptions="Center"></Label>
-                    </Border>
-
-                </VerticalStackLayout>
-            </Border>
+            <Button
+                Grid.Row="4"
+                
+                Padding="5"
+                WidthRequest="300"
+                Margin="10"
+                Text="Play Again"
+                ZIndex="50"
+                FontSize="28"
+                IsEnabled="True"
+                Clicked="Button_Clicked"
+               
+                ></Button>
 
 
 
         </Grid>
 
-    </Grid>
 
 </ContentPage>
+    
+
+
+
 
 
     
