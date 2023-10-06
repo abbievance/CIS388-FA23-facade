@@ -60,13 +60,13 @@ namespace facade
             if (CurrentGuess.Equals(SecretColor))
             {
                 DidWin = true;
-                await Shell.Current.GoToAsync($"{nameof(GameOverPage)}?DidWin={DidWin}");
+                await Shell.Current.Navigation.PushAsync(new GameOverPage(DidWin, Guesses));
                 Guesses.Clear();
             }
             if (Guesses.Count == 6 && (CurrentGuess.Equals(SecretColor) == false))
             {
                 DidWin = false;
-                await Shell.Current.GoToAsync($"{nameof(GameOverPage)}?DidWin={DidWin}");
+                await Shell.Current.Navigation.PushAsync(new GameOverPage(DidWin, Guesses));
                 Guesses.Clear();
             }
             CurrentGuess = "";

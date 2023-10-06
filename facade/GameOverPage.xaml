@@ -68,7 +68,7 @@
                 <Button
                         TextColor="Black"
                          x:Name="guess1"
-                        BackgroundColor="#facedb"
+                        BackgroundColor="White"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
@@ -76,7 +76,7 @@
                 <Button
                         TextColor="Black"
                          x:Name="guess2"
-                        BackgroundColor="#beeded"
+                        BackgroundColor="White"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
@@ -84,7 +84,7 @@
                     <Button
                         TextColor="Black"
                          x:Name="guess3"
-                        BackgroundColor="#edafed"
+                        BackgroundColor="White"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
@@ -92,7 +92,7 @@
                     <Button
                         TextColor="Black"
                          x:Name="guess4"
-                        BackgroundColor="#facade"
+                        BackgroundColor="White"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
@@ -100,7 +100,7 @@
                     <Button
                         TextColor="Black"
                          x:Name="guess5"
-                        BackgroundColor="#deface"
+                        BackgroundColor="White"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
@@ -108,7 +108,7 @@
                     <Button
                         TextColor="Black"
                          x:Name="guess6"
-                        BackgroundColor="#feaded"
+                        BackgroundColor="White"
                         HeightRequest="50"
                         WidthRequest="50"
                         Margin="10"
