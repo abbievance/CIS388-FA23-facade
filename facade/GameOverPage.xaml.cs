@@ -7,9 +7,12 @@ public partial class GameOverPage : ContentPage
 
 {
 
-    public GameOverPage(bool didWin, ObservableCollection<ColorGuess> guesses)
+    public GameOverPage(bool didWin, ObservableCollection<ColorGuess> guesses, string colorName, Color colorBackground)
 	{
 		InitializeComponent();
+
+        gridColor.BackgroundColor = colorBackground;
+        labelText.Text = colorName;
 
         if (didWin)
         {
@@ -56,6 +59,8 @@ public partial class GameOverPage : ContentPage
                 guess6.BackgroundColor = guesses[5].Color;
                 break;
 
+
+
         }
 
 
@@ -63,6 +68,6 @@ public partial class GameOverPage : ContentPage
     }
     async void Button_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("..");
+        await Shell.Current.Navigation.PushAsync(new MainPage());
     }
 }

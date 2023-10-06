@@ -17,6 +17,9 @@ namespace facade
         private string secretColor;
 
         [ObservableProperty]
+        private Color textColor;
+
+        [ObservableProperty]
         private string currentGuess;
 
         public ObservableCollection<ColorGuess> Guesses { get; set; }
@@ -25,7 +28,18 @@ namespace facade
         public MainPageViewModel()
         {
             /*secretColor = Color.FromArgb("#beefed");*/
-            secretColor = "BEADED";
+            var characters = "ABCDEF";
+            var stringCharacters = new char[6];
+            var random = new Random();
+
+            for (int i = 0; i < stringCharacters.Length; i++)
+            {
+                stringCharacters[i] = characters[random.Next(characters.Length)];
+            }
+
+
+            secretColor = new string(stringCharacters);
+            textColor = Color.FromArgb($"#{secretColor.ToLower()}");
             currentGuess = "";
             Guesses = new ObservableCollection<ColorGuess>();
         }
@@ -60,13 +74,13 @@ namespace facade
             if (CurrentGuess.Equals(SecretColor))
             {
                 DidWin = true;
-                await Shell.Current.Navigation.PushAsync(new GameOverPage(DidWin, Guesses));
+                await Shell.Current.Navigation.PushAsync(new GameOverPage(DidWin, Guesses, SecretColor, TextColor));
                 Guesses.Clear();
             }
             if (Guesses.Count == 6 && (CurrentGuess.Equals(SecretColor) == false))
             {
                 DidWin = false;
-                await Shell.Current.Navigation.PushAsync(new GameOverPage(DidWin, Guesses));
+                await Shell.Current.Navigation.PushAsync(new GameOverPage(DidWin, Guesses, SecretColor, TextColor));
                 Guesses.Clear();
             }
             CurrentGuess = "";

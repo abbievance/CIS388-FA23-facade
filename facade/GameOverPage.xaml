@@ -43,9 +43,12 @@
                 <RoundRectangle CornerRadius="30, 30, 30, 30" />
             </Border.StrokeShape>
 
-            <Grid BackgroundColor="#beaded" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid 
+                x:Name="gridColor"
+                BackgroundColor="#beaded" HorizontalOptions="Fill" VerticalOptions="Fill">
 
                 <Label Text="#BEADED"
+                       x:Name="labelText"
                        FontSize="60"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
