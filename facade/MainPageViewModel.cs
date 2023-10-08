@@ -28,6 +28,8 @@ namespace facade
         public MainPageViewModel()
         {
             /*secretColor = Color.FromArgb("#beefed");*/
+            // I got this random string thing from the internet btw, I did not come up with it
+            // from https://stackoverflow.com/questions/1344221/how-can-i-generate-random-alphanumeric-strings
             var characters = "ABCDEF";
             var stringCharacters = new char[6];
             var random = new Random();
